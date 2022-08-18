@@ -70,6 +70,7 @@ function App() {
   
   else if(mode === 'CREATE')
   {
+    console.log('create');
     content = <Create onCreate={(_title, _body)=>{
       console.log(`title : ${_title}  body : ${_body}`)
 
@@ -103,7 +104,7 @@ function App() {
 
   return (
     <div>
-      <Header title="WEB" onChangeMode={()=>{
+      <Header title="WEB BOARD" onChangeMode={()=>{
         setMode('WELCOME');
       }}></Header>
 
