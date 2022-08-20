@@ -1,7 +1,25 @@
-#root{
-  text-align: center;
-  width: 80%;
-  margin: auto;
+#root {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+button, #submitButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(136, 136, 136);
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover, #submitButton:hover{
+  background-color: rgb(136, 136, 136);
 }
 
 /* .App {

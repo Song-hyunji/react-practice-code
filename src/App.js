@@ -6,7 +6,7 @@ import Nav from './component/Nav';
 import Header from './component/Header';
 import Create from './component/Create';
 import Update from './component/Update';
-////////
+
 function App() {
   const [mode, setMode] = useState('WELCOME');
   const [id, setId] = useState(null);
@@ -52,19 +52,19 @@ function App() {
   {
     content = <Article title={title} body={body}></Article>
     contextControl = <>
-      <li><a href={'/update/'+id} onClick={ event=>{
+      <button href={'/update/'+id} onClick={ event=>{
         event.preventDefault();
         setMode('UPDATE');
         
-      }}>Update</a></li>
+      }}>Update</button>
 
       {/* DELETE 버튼. 삭제 누른 것 제외하고 배열에 담아서 배열state 갱신 */}
-      <li><input type="button" value="Delete" onClick={()=>{
+      <button value="Delete" onClick={()=>{
         const newTopics = topics.filter(topic => topic.id !== id)
         setTopics(newTopics);
         setMode('WELCOME');
         localStorage.setItem('data', JSON.stringify(newTopics));
-      }} /></li>
+      }} >Delete</button>
     </>
   } 
   
@@ -116,14 +116,14 @@ function App() {
 
       {content}
 
-      <ul>
-        <li><a href="/create" onClick={event=>{
+      <div>
+        <button href="/create" onClick={event=>{
           event.preventDefault();
           setMode('CREATE');
-        }}>Create</a></li>
+        }}>Create</button>
 
         {contextControl}
-      </ul>
+      </div>
 
     </div>
   );

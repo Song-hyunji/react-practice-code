@@ -40,7 +40,7 @@ function Update(props){
         <p><textarea id="contentInput" name="body" placeholder="body" value={body} onChange={event=>{
           setBody(event.target.value);
         }}></textarea></p>
-        <p><input type="submit" value="Update"></input></p>
+        <p><input id="submitButton" type="submit" value="Update"></input></p>
       </form>
     </article>
     </StyledUpdate></>

@@ -33,7 +33,7 @@ function Create(props){
         
         <p><input id="titleInput" type="text" name="title" placeholder="WRITE TITLE"/></p>
         <p><textarea id="contentInput" name="body" placeholder="WRITE CONTENT"></textarea></p>
-        <p><input type="submit" value="Create"></input></p>
+        <p><input id="submitButton" type="submit" value="Create"></input></p>
       </form>
     </article>
     </StyledCreate></>
